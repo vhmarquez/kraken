@@ -1,0 +1,51 @@
+////////////////////////////////////////////////
+// Mixins
+////////////////////////////////////////////////
+
+///////////////////////////////////////
+// Media Query
+///////////////////////////////////////
+
+@mixin media-query($breakpoint)
+
+	@if $breakpoint == lap
+		@media screen and (min-width: $lap-start)
+			@content
+
+	@else if $breakpoint == desk
+		@media screen and (min-width: $desk-start)
+			@content
+
+@mixin media-query-debug()
+
+	@media screen and (max-width: $lap-start - 1px)
+		@content
+
+///////////////////////////////////////
+// Font Size mixin - grabbed from Inuit.css
+///////////////////////////////////////
+
+@mixin font-size($font-size, $line-height: true)
+	font-size: $font-size
+	font-size: ($font-size / $base-font-size) * 1rem
+
+	@if $line-height == true
+		line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size)
+
+///////////////////////////////////////
+// REM
+///////////////////////////////////////		
+
+@mixin rem($property, $number)
+
+	#{$property}: $number
+	#{$property}: ($number / $base-font-size) * 1rem
+
+///////////////////////////////////////
+// Hover mixin for hover & focus functionality
+///////////////////////////////////////
+
+@mixin hover()
+	&:hover,
+	&:focus
+		@content

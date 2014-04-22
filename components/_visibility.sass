@@ -1,0 +1,54 @@
+////////////////////////////////////////////////
+// Accessibility - Visibility
+////////////////////////////////////////////////
+
+@mixin visbility($space: "")
+
+	.dis-none#{$space},
+	%dis-none#{$space}
+		display: none
+
+	.dis-inline#{$space},
+	%dis-inline#{$space}
+		display: inline
+
+	.dis-inline-block#{$space},
+	%dis-inline-block#{$space}
+		display: inline-block
+
+	.dis-block#{$space},
+	%dis-block#{$space}
+		display: block
+
+	.dis-table#{$space},
+	%dis-table#{$space}
+		display: table
+		
+	.dis-table-cell#{$space},
+	%dis-table-cell#{$space}
+		display: table-cell
+
+@mixin visuallyhidden($space: "")
+	
+	.visuallyhidden#{$space},
+	%visuallyhidden#{$space}
+		width: 1px!important
+		height: 1px!important
+		padding: 0!important
+		margin: -1px!important
+		position: absolute!important
+		overflow: hidden!important
+		border: 0!important
+		clip: rect(0 0 0 0)!important
+
+@include visbility()
+@include visuallyhidden()
+
+@each $state in $breakpoints
+	+media-query($state)
+		+visbility('--#{$state}')
+		+visuallyhidden('--#{$state}')
+
+// ------ Palm for accessibility ------ //
++media-query-debug()
+	+visuallyhidden('--palm')

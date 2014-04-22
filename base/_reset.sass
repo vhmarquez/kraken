@@ -1,0 +1,93 @@
+////////////////////////////////////////////////
+// Base Elements
+////////////////////////////////////////////////
+
+///////////////////////////////////////
+// Box Sizing
+///////////////////////////////////////
+
+*
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+///////////////////////////////////////
+// Remove Element defaults
+///////////////////////////////////////
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td
+	margin: 0
+	padding: 0
+
+///////////////////////////////////////
+// HTML & Body
+///////////////////////////////////////
+
+html
+	font-size: 100% // use the browsers default font-size as a base
+	line-height: $line-height-ratio
+	overflow-y: scroll
+	min-height: 100%
+
+body
+	-webkit-font-smoothing: antialiased
+	font-smoothing: antialiased
+
+///////////////////////////////////////
+// UL's and OL's
+///////////////////////////////////////	
+
+ul,
+ol
+	list-style: none
+
+///////////////////////////////////////
+// Form Element defaults
+///////////////////////////////////////
+
+fieldset
+	padding: $base-spacing-unit
+
+input,
+select,
+textarea
+	max-width: 100% // don't let inputs break layouts
+
+select
+	width: 100% // let select lists use the full width allotted
+
+///////////////////////////////////////
+// Images
+///////////////////////////////////////
+
+img,
+audio,
+video,
+iframe
+	max-width: 100% // O.M.F.G. we're live
+	display: inline-block
+	vertical-align: middle

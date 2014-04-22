@@ -1,0 +1,153 @@
+////////////////////////////////////////////////
+// Site Widths
+////////////////////////////////////////////////
+
+///////////////////////////////////////
+// Classes (visible)
+///////////////////////////////////////
+
+@mixin layout-widths($space: "")
+
+	// ------ Whole ------ //
+	.#{$space}one-whole
+		width: percentage(1)
+
+	// ------ Halves ------ //
+	.#{$space}one-half,
+	.#{$space}two-fourths
+		width: percentage(1/2)
+
+	// ------ Thirds ------ //
+	.#{$space}one-third
+		width: percentage(1/3)
+
+	.#{$space}two-thirds
+		width: percentage(2/3)
+
+	// ------ Fourths ------ //
+	.#{$space}one-fourth
+		width: percentage(1/4)
+
+	.#{$space}three-fourths
+		width: percentage(3/4)
+
+///////////////////////////////////////
+// Placeholders (invisible)
+///////////////////////////////////////
+
+@mixin widths($space: "")
+	
+	// ------ Whole ------ //
+	%#{$space}one-whole
+		width: percentage(1)
+
+	// ------ Halves ------ //
+	%#{$space}one-half,
+	%#{$space}two-fourths,
+	%#{$space}three-sixths,
+	%#{$space}four-eighths,
+	%#{$space}five-tenths,
+	%#{$space}six-twelfths
+		width: percentage(1/2)
+
+	// ------ Thirds ------ //
+	%#{$space}one-third,
+	%#{$space}two-sixths,
+	%#{$space}three-ninths,
+	%#{$space}four-twelfths
+		width: percentage(1/3)
+
+	%#{$space}two-thirds,
+	%#{$space}four-sixths,
+	%#{$space}six-ninths,
+	%#{$space}eight-twelfths
+		width: percentage(2/3)
+
+	// ------ Fourths ------ //
+	%#{$space}one-fourth,
+	%#{$space}two-eighths,
+	%#{$space}three-twelfths
+		width: percentage(1/4)
+
+	%#{$space}three-fourths,
+	%#{$space}six-eighths,
+	%#{$space}nine-twelfths
+		width: percentage(3/4)
+
+	// ------ Fifths ------ //
+	%#{$space}one-fifth,
+	%#{$space}two-tenths
+		width: percentage(1/5)
+
+	%#{$space}two-fifths,
+	%#{$space}four-tenths
+		width: percentage(2/5)
+
+	%#{$space}three-fifths,
+	%#{$space}six-tenths
+		width: percentage(3/5)
+
+	%#{$space}four-fifths,
+	%#{$space}eight-tenths
+		width: percentage(4/5)
+
+	// ------ Sixths ------ //
+	%#{$space}one-sixth,
+	%#{$space}two-twelfths
+		width: percentage(1/6)
+
+	%#{$space}five-sixths,
+	%#{$space}ten-twelfths
+		width: percentage(5/6)
+
+	// ------ Eighths ------ //
+	%#{$space}one-eighth
+		width: percentage(1/8)
+	%#{$space}three-eighths
+		width: percentage(3/8)
+	%#{$space}five-eighths
+		width: percentage(5/8)
+	%#{$space}seven-eighths
+		width: percentage(7/8)
+
+	// ------ Ninths ------ //
+	%#{$space}one-ninth
+		width: percentage(1/9)
+	%#{$space}two-ninths
+		width: percentage(2/9)
+	%#{$space}four-ninths
+		width: percentage(4/9)
+	%#{$space}five-ninths
+		width: percentage(5/9)
+	%#{$space}seven-ninths
+		width: percentage(7/9)
+	%#{$space}eight-ninths
+		width: percentage(8/9)
+
+	// ------ Tenths ------ //
+	%#{$space}one-tenth
+		width: percentage(1/10)
+	%#{$space}three-tenths
+		width: percentage(3/10)
+	%#{$space}seven-tenths
+		width: percentage(7/10)
+	%#{$space}nine-tenths
+		width: percentage(9/10)
+
+	// ------ Twelves ------ //
+	%#{$space}one-twelfth
+		width: percentage(1/12)
+	%#{$space}five-twelfths
+		width: percentage(5/12)
+	%#{$space}seven-twelfths
+		width: percentage(7/12)
+	%#{$space}eleven-twelfths
+		width: percentage(11/12)
+
+@include layout-widths()
+@include widths()
+
+@each $state in $breakpoints
+	+media-query($state)
+		+widths('#{$state}-')
+		+layout-widths('#{$state}-')
