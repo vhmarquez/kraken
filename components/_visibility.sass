@@ -4,34 +4,34 @@
 
 @mixin visbility($space: "")
 
-	.dis-none#{$space},
-	%dis-none#{$space}
+	.#{$space}dis-none,
+	%#{$space}dis-none
 		display: none
 
-	.dis-inline#{$space},
-	%dis-inline#{$space}
+	.#{$space}dis-inline,
+	%#{$space}dis-inline
 		display: inline
 
-	.dis-inline-block#{$space},
-	%dis-inline-block#{$space}
+	.#{$space}dis-inline-block,
+	%#{$space}dis-inline-block
 		display: inline-block
 
-	.dis-block#{$space},
-	%dis-block#{$space}
+	.#{$space}dis-block,
+	%#{$space}dis-block
 		display: block
 
-	.dis-table#{$space},
-	%dis-table#{$space}
+	.#{$space}dis-table,
+	%#{$space}dis-table
 		display: table
 		
-	.dis-table-cell#{$space},
-	%dis-table-cell#{$space}
+	.#{$space}dis-table-cell,
+	%#{$space}dis-table-cell
 		display: table-cell
 
 @mixin visuallyhidden($space: "")
 	
-	.visuallyhidden#{$space},
-	%visuallyhidden#{$space}
+	.#{$space}visuallyhidden,
+	%#{$space}visuallyhidden
 		width: 1px!important
 		height: 1px!important
 		padding: 0!important
@@ -46,9 +46,9 @@
 
 @each $state in $breakpoints
 	+media-query($state)
-		+visbility('--#{$state}')
-		+visuallyhidden('--#{$state}')
+		+visbility('#{$state}--')
+		+visuallyhidden('#{$state}--')
 
 // ------ Palm for accessibility ------ //
 +media-query-debug()
-	+visuallyhidden('--palm')
+	+visuallyhidden('palm--')
