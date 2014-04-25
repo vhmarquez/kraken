@@ -1,8 +1,11 @@
 ////////////////////////////////////////////////
-// Box Model
+// BOX MODEL
 ////////////////////////////////////////////////
 
 @mixin box-model($space: "")
+
+// padding
+///////////////////////////////////////
 
 	%#{$space}padding
 		padding: $base-spacing-unit
@@ -21,6 +24,9 @@
 		padding-top: $base-spacing-unit
 		padding-bottom: $base-spacing-unit
 
+// half padding
+///////////////////////////////////////
+
 	%#{$space}padding-half
 		padding: $half-spacing-unit
 	%#{$space}padding-half-left
@@ -37,6 +43,9 @@
 	%#{$space}padding-half-ends
 		padding-top: $half-spacing-unit
 		padding-bottom: $half-spacing-unit
+
+// double padding
+///////////////////////////////////////
 
 	%#{$space}padding-double
 		padding: $dbl-spacing-unit
@@ -55,6 +64,9 @@
 		padding-top: $dbl-spacing-unit
 		padding-bottom: $dbl-spacing-unit
 
+// remove padding
+///////////////////////////////////////
+
 	%#{$space}padding-off
 		padding: 0
 	%#{$space}padding-off-left
@@ -71,6 +83,9 @@
 	%#{$space}padding-off-ends
 		padding-top: 0
 		padding-bottom: 0
+
+// margin
+///////////////////////////////////////
 
 	%#{$space}margin
 		+rem(margin, $base-spacing-unit)
@@ -89,6 +104,9 @@
 		+rem(margin-top, $base-spacing-unit)
 		+rem(margin-bottom, $base-spacing-unit)
 
+// half margin
+///////////////////////////////////////
+
 	%#{$space}margin-half
 		+rem(margin, $half-spacing-unit)
 	%#{$space}margin-half-left
@@ -105,6 +123,9 @@
 	%#{$space}margin-half-ends
 		+rem(margin-top, $half-spacing-unit)
 		+rem(margin-bottom, $half-spacing-unit)
+
+// double margin
+///////////////////////////////////////
 
 	%#{$space}margin-double
 		+rem(margin, $dbl-spacing-unit)
@@ -123,6 +144,9 @@
 		+rem(margin-top, $dbl-spacing-unit)
 		+rem(margin-bottom, $dbl-spacing-unit)
 
+// remove margin
+///////////////////////////////////////
+
 	%#{$space}margin-off
 		margin: 0
 	%#{$space}margin-off-left
@@ -139,6 +163,9 @@
 	%#{$space}margin-off-ends
 		margin-top: 0
 		margin-bottom: 0
+
+// margin auto
+///////////////////////////////////////
 
 	%#{$space}margin-auto
 		margin: auto
@@ -158,6 +185,9 @@
 		margin-bottom: auto
 
 @include box-model()
+
+// add breakpoints to margin and padding
+///////////////////////////////////////
 
 @each $state in $breakpoints
 	+media-query($state)

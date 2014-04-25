@@ -1,9 +1,8 @@
 ////////////////////////////////////////////////
-// Mixins
+// MIXINS
 ////////////////////////////////////////////////
 
-///////////////////////////////////////
-// Media Query
+// media query
 ///////////////////////////////////////
 
 @mixin media-query($breakpoint)
@@ -21,8 +20,7 @@
 	@media screen and (max-width: $lap-start - 1px)
 		@content
 
-///////////////////////////////////////
-// Font Size mixin - grabbed from Inuit.css
+// font size mixin
 ///////////////////////////////////////
 
 @mixin font-size($font-size, $line-height: true)
@@ -32,17 +30,15 @@
 	@if $line-height == true
 		line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size)
 
+// rem
 ///////////////////////////////////////
-// REM
-///////////////////////////////////////		
 
 @mixin rem($property, $number)
 
 	#{$property}: $number
 	#{$property}: ($number / $base-font-size) * 1rem
 
-///////////////////////////////////////
-// Absolute Positioning
+// absolute position
 ///////////////////////////////////////
 
 @mixin pos-abs ($top: auto, $right: auto, $bottom: auto, $left: auto)
@@ -52,8 +48,7 @@
 	left: $left
 	position: absolute !important
 
-///////////////////////////////////////
-// Hover mixin for hover & focus functionality
+// hover, active, and focus
 ///////////////////////////////////////
 
 @mixin hover()

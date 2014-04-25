@@ -1,8 +1,11 @@
 ////////////////////////////////////////////////
-// Accessibility - Visibility
+// ACCESSIBILITY & DISPLAY
 ////////////////////////////////////////////////
 
-@mixin visbility($space: "")
+@mixin display($space: "")
+
+// display types
+///////////////////////////////////////
 
 	.#{$space}dis-none,
 	%#{$space}dis-none
@@ -44,9 +47,12 @@
 @include visbility()
 @include visuallyhidden()
 
+// 
+///////////////////////////////////////
+
 @each $state in $breakpoints
 	+media-query($state)
-		+visbility('#{$state}--')
+		+display('#{$state}--')
 		+visuallyhidden('#{$state}--')
 
 // ------ Palm for accessibility ------ //
