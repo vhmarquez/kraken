@@ -7,14 +7,33 @@
 
 @import default
 @import base/reset
+@import base/normalize
 
 // tools
 ///////////////////////////////////////
 
 @import tools/utility
-@import tools/mixins
-@import tools/placeholders
-@import tools/normalize
+
+// mixins
+@import tools/mixins/media-queries
+@import tools/mixins/rem
+@import tools/mixins/hover
+@import tools/mixins/font-size
+@import tools/mixins/absolute-position
+
+// placeholders
+@import tools/placeholders/cursor
+@import tools/placeholders/display
+@import tools/placeholders/floats
+@import tools/placeholders/font-styles
+@import tools/placeholders/font-weights
+@import tools/placeholders/fonts
+@import tools/placeholders/position
+@import tools/placeholders/text-alignment
+@import tools/placeholders/text-decoration
+@import tools/placeholders/text-replacement
+@import tools/placeholders/text-transform
+@import tools/placeholders/text-truncate
 
 // components
 ///////////////////////////////////////
@@ -24,7 +43,10 @@
 @import components/push
 @import components/visibility
 @import components/widths
-@import components/box-model
+
+// box model
+@import components/box-model/margin
+@import components/box-model/padding
 
 // base
 ///////////////////////////////////////
