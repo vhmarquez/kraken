@@ -2,35 +2,7 @@
 // PULL
 ////////////////////////////////////////////////
 
-// classes (visible)
-///////////////////////////////////////
-
-@mixin layout-pull-setup($space: "")
-
-	
-	.pull--#{$space}one-whole
-		right: percentage(1)
-	
-	
-	.pull--#{$space}one-half,
-	.pull--#{$space}two-fourths
-		right: percentage(1/2)
-	
-	
-	.pull--#{$space}one-third
-		right: percentage(1/3)
-
-	.pull--#{$space}two-thirds
-		right: percentage(2/3)
-	
-	
-	.pull--#{$space}one-fourth
-		right: percentage(1/4)
-
-	.pull--#{$space}three-fourths
-		right: percentage(3/4)
-
-// placeholders (invisible)
+// placeholders 
 ///////////////////////////////////////
 
 @mixin pull-setup($space: "")
@@ -159,16 +131,13 @@
 @if $use-pull == true
 	
 	@include pull-setup()
-	@include layout-pull-setup()
 
 	@if $lap-pull == true
 
 		+media-query(lap)
 			+pull-setup('lap-')
-			+layout-pull-setup('lap-')
 
 	@if $desk-pull == true
 
 		+media-query(desk)
 			+pull-setup('desk-')
-			+layout-pull-setup('desk-')
