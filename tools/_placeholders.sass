@@ -5,6 +5,13 @@
 // position
 ///////////////////////////////////////
 
+=pos-static
+	position: static
+
+%pos-static,
+%ps
+	+pos-static
+
 =pos-rel
 	position: relative
 
@@ -29,40 +36,125 @@
 // display type
 ///////////////////////////////////////
 
+=dis-none
+	display: none
+
+%dis-none
+	+dis-none
+
 =dis-inline
 	display: inline
 
-%dis-inline,
-%di
+%dis-inline
 	+dis-inline
 
 =dis-inline-block
 	display: inline-block
 
-%dis-inline-block,
-%dib
+%dis-inline-block
 	+dis-inline-block
 
 =dis-block
 	display: block
 
-%dis-block,
-%db
+%dis-block
 	+dis-block
+
+=dis-list-item
+	display: list-item
+
+%dis-list-item
+	+dis-list-item
+
+=dis-inline-table
+	display: inline-table
+
+%dis-inline-table
+	+dis-inline-table
 
 =dis-table
 	display: table
 
-%dis-table,
-%dt
+%dis-table
 	+dis-table
 
 =dis-table-cell
 	display: table-cell
 
-%dis-table-cell,
-%dtc
+%dis-table-cell
 	+dis-table-cell
+
+=dis-table-column
+	display: table-column
+
+%dis-table-column
+	+dis-table-column
+
+=dis-table-column-group
+	display: table-column-group
+
+%dis-table-column-group
+	+dis-table-column-group
+
+=dis-table-footer-group
+	display: table-footer-group
+
+%dis-table-footer-group
+	+dis-table-footer-group
+
+=dis-table-header-group
+	display: table-header-group
+
+%dis-table-header-group
+	+dis-table-header-group
+
+=dis-table-row
+	display: table-row
+
+%dis-table-row
+	+dis-table-row
+
+=dis-table-row-group
+	display: table-row-group
+
+%dis-table-row-group
+	+dis-table-row-group
+
+=dis-flex
+	display: flex
+
+%dis-flex
+	+dis-flex
+
+=dis-inline-flex
+	display: inline-flex
+
+%dis-inline-flex
+	+dis-inline-flex
+
+=dis-grid
+	display: grid
+
+%dis-grid
+	+dis-grid
+
+=dis-inline-grid
+	display: inline-grid
+
+%dis-inline-grid
+	+dis-inline-grid
+
+=dis-run-in
+	display: run-in
+
+%dis-run-in
+	+dis-run-in
+
+=dis-inherit
+	display: inherit
+
+%dis-inherit
+	+dis-inherit
 
 // floats
 ///////////////////////////////////////
@@ -87,6 +179,13 @@
 %float-none,
 %fn
 	+float-none
+
+=float-inherit
+	float: inherit
+
+%float-inherit,
+%fi
+	+float-inherit
 
 // cursor
 ///////////////////////////////////////
@@ -127,6 +226,30 @@
 %tc
 	+text-center
 
+=text-justify
+	text-align: justify
+
+%text-justify
+	+text-justify
+
+=text-start
+	text-align: start
+
+%text-start
+	+text-start
+
+=text-end
+	text-align: end
+
+%text-end
+	+text-end
+
+=text-match-parent
+	text-align: match-parent
+
+%text-match-parent
+	+text-match-parent
+
 // text truncate
 ///////////////////////////////////////
 
@@ -153,63 +276,81 @@
 // text decoration
 ///////////////////////////////////////
 
-=text-none
+=text-dec-none
 	text-decoration: none
 
-%text-none
-	+text-none
+%text-dec-none
+	+text-dec-none
 
-=text-underline
+=text-dec-underline
 	text-decoration: underline
 
-%text-underline
-	+text-underline
+%text-dec-underline
+	+text-dec-underline
 
-=text-overline
+=text-dec-overline
 	text-decoration: overline
 
-%text-overline
-	+text-overline
+%text-dec-overline
+	+text-dec-overline
 
-=text-line-through
+=text-dec-line-through
 	text-decoration: line-through
 
-%text-line-through
-	+text-line-through
+%text-dec-line-through
+	+text-dec-line-through
 
 // text transform
 ///////////////////////////////////////
 
-=text-capitalize
+=text-trans-capitalize
 	text-transform: capitalize
 
-%text-capitalize,
+%text-trans-capitalize,
 %caps
-	+text-capitalize
+	+text-trans-capitalize
 
-=text-uppercase
+=text-trans-uppercase
 	text-transform: uppercase
 
-%text-uppercase,
+%text-trans-uppercase,
 %uppercase
 	+text-uppercase
 
-=text-lowercase
+=text-trans-lowercase
 	text-transform: lowercase
 
-%text-lowercase,
+%text-trans-lowercase,
 %lowercase
-	+text-lowercase
+	+text-trans-lowercase
+
+=text-trans-none
+	text-transform: none
+
+%text-trans-none
+	+text-trans-none
+
+=text-trans-full
+	text-transform: full-width
+
+%text-trans-full
+	+text-trans-full
+
+=text-trans-inherit
+	text-transform: inherit
+
+%text-trans-inherit
+	+text-trans-inherit
 
 // font styles
 ///////////////////////////////////////
 
-=text-italic
+=text-style-italic
 	font-style: italic
 
-%text-italic,
+%text-style-italic,
 %italic
-	+text-italic
+	+text-style-italic
 
 // font weights
 ///////////////////////////////////////
