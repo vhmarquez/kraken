@@ -5,61 +5,97 @@
 // position
 ///////////////////////////////////////
 
-%pos--rel,
-%pr
+=pos-rel
 	position: relative
 
-%pos--abs,
-%pa
+%pos-rel,
+%pr
+	+pos-rel
+
+=pos-abs
 	position: absolute
 
-%pos--fixed,
-%pf
+%pos-abs,
+%pa
+	+pos-abs
+
+=pos-fixed
 	position: fixed
+
+%pos-fixed,
+%pf
+	+pos-fixed
 
 // display type
 ///////////////////////////////////////
 
-%dis--inline,
-%di
+=dis-inline
 	display: inline
 
-%dis--inline-block,
-%dib
+%dis-inline,
+%di
+	+dis-inline
+
+=dis-inline-block
 	display: inline-block
 
-%dis--block,
-%db
+%dis-inline-block,
+%dib
+	+dis-inline-block
+
+=dis-block
 	display: block
 
-%dis--table,
-%dt
+%dis-block,
+%db
+	+dis-block
+
+=dis-table
 	display: table
 
-%dis--table-cell,
-%dtc
+%dis-table,
+%dt
+	+dis-table
+
+=dis-table-cell
 	display: table-cell
+
+%dis-table-cell,
+%dtc
+	+dis-table-cell
 
 // floats
 ///////////////////////////////////////
 
-%float--left,
-%fl
+=float-left
 	float: left
 
-%float--right,
-%fr
+%float-left,
+%fl
+	+float-left
+
+=float-right
 	float: right
 
-%float--none,
-%fn
+%float-right,
+%fr
+	+float-right
+
+=float-none
 	float: none
+
+%float-none,
+%fn
+	+float-none
 
 // cursor
 ///////////////////////////////////////
 
-%cursor-pointer
+=cursor-pointer
 	cursor: pointer
+
+%cursor-pointer
+	+cursor-pointer
 
 // base font size
 ///////////////////////////////////////
@@ -70,84 +106,131 @@
 // text alignment
 ///////////////////////////////////////
 
-%text--left,
-%tl
+=text-left
 	text-align: left
 
-%text--right,
-%tr
+%text-left,
+%tl
+	+text-left
+
+=text-right
 	text-align: right
 
-%text--center,
-%tc
+%text-right,
+%tr
+	+text-right
+
+=text-center
 	text-align: center
+
+%text-center,
+%tc
+	+text-center
 
 // text truncate
 ///////////////////////////////////////
 
-%text--truncate
+=text-truncate
 	overflow: hidden
 	text-overflow: ellipsis
 	white-space: nowrap
 
+%text-truncate
+	+text-truncate
+
 // text replacement
 ///////////////////////////////////////
 
-%text--replacement
+=text-replacement
 	border: 0
 	color: transparent
 	font: 0/0 a
 	text-shadow: none
 
+%text-replacement
+	+text-replacement
+
 // text decoration
 ///////////////////////////////////////
 
-%text--none
+=text-none
 	text-decoration: none
 
-%text--underline
+%text-none
+	+text-none
+
+=text-underline
 	text-decoration: underline
 
-%text--overline
+%text-underline
+	+text-underline
+
+=text-overline
 	text-decoration: overline
 
-%text--line-through
+%text-overline
+	+text-overline
+
+=text-line-through
 	text-decoration: line-through
+
+%text-line-through
+	+text-line-through
 
 // text transform
 ///////////////////////////////////////
 
-%text-capitalize,
-%caps
+=text-capitalize
 	text-transform: capitalize
 
-%text--uppercase,
-%uppercase
+%text-capitalize,
+%caps
+	+text-capitalize
+
+=text-uppercase
 	text-transform: uppercase
 
-%text--lowercase,
-%lowercase
+%text-uppercase,
+%uppercase
+	+text-uppercase
+
+=text-lowercase
 	text-transform: lowercase
 
+%text-lowercase,
+%lowercase
+	+text-lowercase
 
 // font styles
 ///////////////////////////////////////
 
+=text-italic
+	font-style: italic
+
 %text-italic,
 %italic
-	font-style: italic
+	+text-italic
 
 // font weights
 ///////////////////////////////////////
 
-%weight--light,
-%wl
+=weight-light
 	font-weight: $weight-light
 
-%weight--normal,
-%wn
+%weight-light,
+%wl
+	+weight-light
+
+=weight-normal
 	font-weight: $weight-normal
 
-%weight--semibold,
-%ws
+%weight-normal,
+%wn
+	+weight-normal
+
+=weight-semibold
 	font-weight: $weight-semibold
+
+%weight-semibold,
+%ws
+	+weight-semibold
