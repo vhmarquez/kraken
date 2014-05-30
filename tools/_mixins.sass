@@ -15,6 +15,10 @@
 		@media screen and (min-width: $desk-start)
 			@content
 
+	@else if $breakpoint == wide
+		@media screen and (min-width: $desk-wide-start)
+			@content
+
 @mixin media-query-debug()
 
 	@media screen and (max-width: $lap-start - 1px)
