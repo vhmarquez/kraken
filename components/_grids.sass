@@ -7,7 +7,7 @@
 
 .grid,
 %grid
-	@extend .cf
+	@extend %cf
 	margin-left: -$base-spacing-unit
 
 .grid > .grid
@@ -25,6 +25,7 @@
 
 .grid--full,
 %grid--full
+	@extend %cf
 	margin-left: 0!important
 	
 	.grid__item
