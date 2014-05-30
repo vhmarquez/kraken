@@ -2,10 +2,10 @@
 // ACCESSIBILITY & DISPLAY
 ////////////////////////////////////////////////
 
-@mixin display($space: "")
-
 // display types
 ///////////////////////////////////////
+
+@mixin display($space: "")
 
 	.#{$space}dis-none,
 	%#{$space}dis-none
@@ -44,11 +44,8 @@
 		border: 0!important
 		clip: rect(0 0 0 0)!important
 
-@include visbility()
+@include display()
 @include visuallyhidden()
-
-// 
-///////////////////////////////////////
 
 @each $state in $breakpoints
 	+media-query($state)
