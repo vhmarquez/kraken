@@ -2,34 +2,6 @@
 // WIDTHS
 ////////////////////////////////////////////////
 
-// classes (visible)
-///////////////////////////////////////
-
-@mixin layout-widths($space: "")
-
-	// ------ Whole ------ //
-	.#{$space}one-whole
-		width: percentage(1)
-
-	// ------ Halves ------ //
-	.#{$space}one-half,
-	.#{$space}two-fourths
-		width: percentage(1/2)
-
-	// ------ Thirds ------ //
-	.#{$space}one-third
-		width: percentage(1/3)
-
-	.#{$space}two-thirds
-		width: percentage(2/3)
-
-	// ------ Fourths ------ //
-	.#{$space}one-fourth
-		width: percentage(1/4)
-
-	.#{$space}three-fourths
-		width: percentage(3/4)
-
 // placeholders (invisible)
 ///////////////////////////////////////
 
@@ -142,7 +114,6 @@
 	%#{$space}eleven-twelfths
 		width: percentage(11/12)
 
-@include layout-widths()
 @include widths()
 
 // Add breakpoints to widths
@@ -151,4 +122,3 @@
 @each $state in $breakpoints
 	+media-query($state)
 		+widths('#{$state}--')
-		+layout-widths('#{$state}--')
