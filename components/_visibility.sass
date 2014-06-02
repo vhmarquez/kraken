@@ -1,29 +1,6 @@
 ////////////////////////////////////////////////
-// ACCESSIBILITY & DISPLAY
+// ACCESSIBILITY
 ////////////////////////////////////////////////
-
-// display types
-///////////////////////////////////////
-
-@mixin display($space: "")
-
-	%#{$space}dis-none
-		display: none
-
-	%#{$space}dis-inline
-		display: inline
-
-	%#{$space}dis-inline-block
-		display: inline-block
-
-	%#{$space}dis-block
-		display: block
-
-	%#{$space}dis-table
-		display: table
-		
-	%#{$space}dis-table-cell
-		display: table-cell
 
 @mixin visuallyhidden($space: "")
 	
@@ -37,12 +14,10 @@
 		border: 0!important
 		clip: rect(0 0 0 0)!important
 
-@include display()
 @include visuallyhidden()
 
 @each $state in $breakpoints
 	+media-query($state)
-		+display('#{$state}--')
 		+visuallyhidden('#{$state}--')
 
 // ------ Palm for accessibility ------ //
