@@ -5,7 +5,7 @@
 // placeholders
 ///////////////////////////////////////
 
-@mixin push-setup($space: "")
+=push-setup($space: "")
 
 	
 	%push--#{$space}one-whole
@@ -128,16 +128,11 @@
 	%push--#{$space}eleven-twelfths
 		left: percentage(11/12)
 
-@if $use-push == true
-	
-	@include push-setup()
+// Add breakpoints to push states
+///////////////////////////////////////
 
-	@if $lap-push == true
++push-setup()
 
-		+media-query(lap)
-			+push-setup('lap-')
-
-	@if $desk-push == true
-
-		+media-query(desk)
-			+push-setup('desk-')
+@each $state in $breakpoints
+	+media-query($state)
+		+push-setup('#{$state}-')
