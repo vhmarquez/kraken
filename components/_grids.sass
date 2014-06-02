@@ -5,16 +5,11 @@
 // default grid behavior
 ///////////////////////////////////////
 
-.grid,
 %grid
 	@extend %cf
 	margin-left: -$base-spacing-unit
 
-.grid > .grid
-	margin-left: 0 // remove margin on nested grid items
-
-.grid__item,
-%grid__item
+%grid-item
 	position: relative
 	width: 100% // default grid items to be own segements in mobile
 	padding-left: $base-spacing-unit
@@ -23,10 +18,9 @@
 // full grid
 ///////////////////////////////////////
 
-.grid--full,
-%grid--full
+%grid-full
 	@extend %cf
 	margin-left: 0!important
 	
-	.grid__item
-		padding-left: 0!important
+.grid-item--full
+	padding-left: 0!important
