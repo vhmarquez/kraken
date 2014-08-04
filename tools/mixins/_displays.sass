@@ -1,0 +1,71 @@
+////////////////////////////////////////////////
+// DISPLAYS
+////////////////////////////////////////////////
+
+=display($space: "")
+
+	%#{$space}dis-none
+		+dis-none
+
+	%#{$space}dis-inline
+		+dis-inline
+
+	%#{$space}dis-inline-block
+		+dis-inline-block
+
+	%#{$space}dis-block
+		+dis-block
+
+	%#{$space}dis-list-item
+		+dis-list-item
+
+	%#{$space}dis-inline-table
+		+dis-inline-table
+
+	%#{$space}dis-table
+		+dis-table
+
+	%#{$space}dis-table-cell
+		+dis-table-cell
+
+	%#{$space}dis-table-column
+		+dis-table-column
+
+	%#{$space}dis-table-column-group
+		+dis-table-column-group
+
+	%#{$space}dis-table-footer-group
+		+dis-table-footer-group
+
+	%#{$space}dis-table-header-group
+		+dis-table-header-group
+
+	%#{$space}dis-table-row
+		+dis-table-row
+
+	%#{$space}dis-table-row-group
+		+dis-table-row-group
+
+	%#{$space}dis-flex
+		+dis-flex
+
+	%#{$space}dis-inline-flex
+		+dis-inline-flex
+
+	%#{$space}dis-grid
+		+dis-grid
+
+	%#{$space}dis-inline-grid
+		+dis-inline-grid
+
+	%#{$space}dis-run-in
+		+dis-run-in
+
+	%#{$space}dis-inherit
+		+dis-inherit
+
++display
+
+@each $state in $breakpoints
+	+media-query($state)
+		+display('#{$state}--')
